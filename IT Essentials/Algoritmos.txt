@@ -1,0 +1,54 @@
+--Algoritmo para ver video de youtube
+INICIO
+2. Encender dispositivo
+3. Validar origen de acceso al video (link, app, navegador)
+4. Si es navegador entonces 
+	4.1 Ingresar URL de youTube.
+	4.2 Seleccionar Video
+5. Si es aplicación entonces
+	5.1 Seleccionar Video 
+6. Mientras video en reproducción
+	6.1 ver video
+7. Cerrar aplicación / navegador
+8. Apagar/bloquear dispositivo.
+FIN
+
+--Algoritmo de rutina diaria
+INICIO
+1. Despertar
+2. Si alarma encendida entonces
+	2.1 apagar
+2. Levantarse
+3. Mientras hay tareas sencillas pendientes entonces
+	3.1 Completar tareas sencillas pendientes
+4. Preparar desayuno
+5. Mientras tenga hambre entonces
+	5.1 comer
+6. Recoger la mesa
+7. Si soy encargado de preparar hija para escuela 
+	7.1 entonces
+		7.1.1 preparar hija a la escuela
+	7.2 si no
+		7.2.1 ayudar a esposa a preparar hija a la escuela
+8. Bañarse
+9. Validar tiempo
+9. Mientras tareas de hogar pendientes
+	9.1 completar tareas de hogar
+10. Mientras horario laboral activo
+	10.1 Mientras hora de almuerzo
+		10.1.1 Mientras tenga hambre entonces
+			10.1.1.1 comer
+		10.1.2 Descansar
+	10.1 trabajar
+11. Si soy encargado de recoger hija
+	11.1 entonces
+		11.1.1 recoger hija
+	11.2 si no
+		11.2.1 esperar llegada de familia
+12. Mientras tiempo familiar
+	12.1 pasar tiempo de calidad en familia.
+13. Mientras tareas pre-sueño pendientes
+	13.1 Completar tareas pre-sueño
+14. Preparar todo para dormir
+15. Dormir
+FIN
