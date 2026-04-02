@@ -32,6 +32,11 @@ def validate_student(new_student):
         print("Error: la sección no debe ser vacía")
         is_valid = False
 
+    for ke,va in new_student[KEYS[2].items()]:
+        if va > 100 or va < 0:
+            print(f"Error: La nota de {ke} presenta una anomalía, favor revisar")
+            is_valid = False
+            
     print("Estudiante válido!!!!")
     return is_valid
 
@@ -62,8 +67,6 @@ def student_insertion():
         else:
             print("Debido a los errores de inserción debe ingresar otra vez el estudiante.")
         students.append(new_student)
-
-    students.append(new_student)
 
 #2"Listar Estudiante
 def list_students():
