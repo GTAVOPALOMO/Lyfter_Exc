@@ -1,0 +1,14 @@
+--Algoritmo para ver video de youtube
+INICIO
+2. Encender dispositivo
+3. Validar origen de acceso al video (link, app, navegador)
+4. Si es navegador entonces 
+	4.1 Ingresar URL de youTube.
+	4.2 Seleccionar Video
+5. Si es aplicación entonces
+	5.1 Seleccionar Video 
+6. Mientras video en reproducción
+	6.1 ver video
+7. Cerrar aplicación / navegador
+8. Apagar/bloquear dispositivo.
+FIN
