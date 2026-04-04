@@ -1,0 +1,56 @@
+--Fiesta sorpresa Hija
+INICIO
+Mientras hija no en casa
+	Mientras invitados no llegaron
+		confirmar asistencia
+	Mientras decoraciones no completes
+		Decorar
+	Mientras snacks/bebidas no abastecidas
+		abastecer
+	Mientras invitados aburridos
+		entretener
+	Si invitados completos
+		preparar llegada
+		hija en casa
+	Si no invitados completos
+		Entretener mas tiempo a hija
+Gritar sorpresa
+Mientras fiesta activa
+	disfrutar
+	si es tarde o si problema
+		fiesta no activa
+despachar invitados
+ordernar lugar
+FIN
+
+--Examen
+INICIO
+Organizar materia
+Leer materia
+Destacar puntos importantes
+Mientras NO listo para examen
+	Si existen dudas
+		aclarar dudas
+	Generar practicas para evaluar conocimiento
+	Evaluar conocimiento
+	Si conocimiento evaluado > 95% 
+		Listo para exament
+FIN
+
+--Viaje
+INICIO
+Validar presupuesto
+Planear schedule
+Definir fecha inicio y fecha fin
+Mientras fecha actual < fecha inicio -1
+	Esperar
+Preparar maletas
+Preparar documentos
+Preparar medicinas
+Preparar transporte
+Mientras final del dia
+	Descansar
+Mientras fecha actual < fecha fin
+	llevar a cabo tareas de schedule
+Regresar a casa
+FIN
