@@ -6,7 +6,9 @@ OPTIONS = [ "Salir",
             "Mejores Promedios",
             "Nota Promedio",
             "Exportar información",
-            "Importar información"]
+            "Importar información",
+            "Borrar estudiante",
+            "Mostar reprobados"]
 
 def start():
     choice = 1
@@ -18,10 +20,11 @@ def start():
                 raise ValueError("Valor negativo")
             if choice >= len(OPTIONS):
                 raise ValueError("Valor no existente")
+            if(choice != 0):
+                process_choice(choice)
         except ValueError as e:
             print(f"******ERROR******\nOPCION NO VALIDA\n{e}\n******ERROR******\n")
-        if(choice != 0):
-            process_choice(choice)
+
 
 
 def option_choice():
