@@ -1,4 +1,5 @@
-from actions import process_choice
+import actions
+import data
 
 OPTIONS = [ "Salir",
             "Ingresar Estudiante",
@@ -10,7 +11,7 @@ OPTIONS = [ "Salir",
             "Borrar estudiante",
             "Mostar reprobados"]
 
-def start():
+def start(students):
     choice = 1
     while choice != 0:
         
@@ -21,11 +22,28 @@ def start():
             if choice >= len(OPTIONS):
                 raise ValueError("Valor no existente")
             if(choice != 0):
-                process_choice(choice)
+                process_choice(choice,students)
         except ValueError as e:
             print(f"******ERROR******\nOPCION NO VALIDA\n{e}\n******ERROR******\n")
 
-
+#Procesar opción seleccionada
+def process_choice(choice,students):
+    if choice == 1:
+        actions.student_insertion(students)
+    if choice == 2:
+        actions.list_students(students)
+    if choice == 3:
+        actions.best_grades(students)
+    if choice == 4:
+        actions.average_grade(students)
+    if choice == 5:
+        data.export_students(students) #Importado desde data
+    if choice == 6:
+        data.validate_imported(students)
+    if choice == 7:
+        actions.remove_student(students)
+    if choice == 8:
+        actions.list_reproved(students)
 
 def option_choice():
     print("Bienvenido al sistema de control de estudiantes")
