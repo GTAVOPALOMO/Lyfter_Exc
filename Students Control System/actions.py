@@ -45,7 +45,9 @@ def student_average_grade(student):
         if len(grades) == 0:
             raise ValueError("El estudiante no tiene notas")
         
-        return sum(grades) / len(grades)
+        numeric_grades = [float(grade) for grade in grades]
+
+        return sum(numeric_grades) / len(numeric_grades)
     
     except Exception as e:
         print(f"ERROR CALCULANDO EL PROMEDIO: {e}")

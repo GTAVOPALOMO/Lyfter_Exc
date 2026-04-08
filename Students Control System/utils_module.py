@@ -37,19 +37,24 @@ def validate_student(new_student):
     print("Validando sección textual...")
     if new_student[KEYS[1]].isnumeric():
         print("Error: la sección debe ser texto")
-        return False
+        is_valid = False
     #Validacion de sección en base a una expresión regular que acepte 1 o dos numeros y una letra mayuscula
     pattern = r"^\d{1,2}[A-Z]$" #r es para que no interprete el \ como carqcter especial de python
     print("Validando patrón de sección...")
     if not bool(re.match(pattern,new_student[KEYS[1]])):
         print("Error, debe respetar el formato NUMERO LETRA ej: 10A, 11B")
-        return False
+        is_valid = False
     print("Validando notas...")
-    for ke,va in new_student[KEYS[2]].items():
-        if float(va) > 100 or float(va) < 0:
-            print(f"Error: La nota de {ke} presenta una anomalía, favor revisar")
-            is_valid = False
-            
+    try:
+        for ke,va in new_student[KEYS[2]].items():
+            if float(va) > 100 or float(va) < 0:
+                print(f"Error: La nota de {ke} presenta una anomalía, favor revisar")
+                is_valid = False
+            else:
+                new_student[KEYS[2]][ke] = float(va)
+    except Exception as e:
+        print(f"Error validando las notas: {e}")
+        is_valid = False
     print("Estudiante válido!!!!")
     return is_valid
 
