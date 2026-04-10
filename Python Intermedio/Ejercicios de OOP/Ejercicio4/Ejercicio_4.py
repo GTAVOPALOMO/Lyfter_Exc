@@ -24,14 +24,14 @@ class Human:
     def __init__(self,_torso):
         self.torso = _torso
 
-left_hand = Hand
+left_hand = Hand()
 left_arm = Arm(left_hand)
-right_hand = Hand
+right_hand = Hand()
 right_arm = Arm(right_hand)
-left_feet = Feet
-left_leg = (left_feet)
-right_feet = Feet
-right_leg = (right_feet)
-head = Head
+left_feet = Feet()
+left_leg = Leg(left_feet)
+right_feet = Feet()
+right_leg = Leg(right_feet)
+head = Head()
 torso = Torso(head,right_arm,left_arm,right_leg,left_leg)
 human = Human(torso)
