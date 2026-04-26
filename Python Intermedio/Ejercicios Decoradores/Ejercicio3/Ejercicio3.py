@@ -9,17 +9,17 @@ class User:
     def __init__(self, date_of_birth: date):
         self.date_of_birth = date_of_birth
 
-        @property
-        def age(self):
-            today = date.today()
-            birth = self.date_of_birth
-            age = today.year - birth.year
-            if today.month < birth.month:
+    @property
+    def age(self):
+        today = date.today()
+        birth = self.date_of_birth
+        age = today.year - birth.year
+        if today.month < birth.month:
+            age -= 1
+        elif today.month == birth.month:
+            if today.day < birth.day:
                 age -= 1
-            elif today.month == birth.month:
-                if today.day < birth.day:
-                    age -= 1
-            return age
+        return age
 """
 --
 Primer intento. 
@@ -51,3 +51,13 @@ def valid_age(function):
             raise ValueError("Menor de edad")
         return function(user)
     return wrapper
+
+@valid_age
+def print_user_age(user: User):
+    print(f"El usuario tiene {user.age} años")
+
+p_user = User(date(2005, 1, 1))#cambien la fecha para probar con un usuario mayor de edad.
+try:
+    print_user_age(p_user)
+except ValueError as e:
+    print(f"Error: {e}")
